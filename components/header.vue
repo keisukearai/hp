@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="bg-lite-neptune p-2 mt-0 fixed w-full z-10 top-0">
+        <nav class="bg-white p-2 mt-0 fixed w-full z-10 top-0">
             <div class="container mx-auto flex flex-wrap items-center">
                 <div class="flex w-full md:w-1/2 justify-center md:justify-start text-steam-black font-extrabold">
                     <a class="no-underline text-2xl hover:text-stj-mist" href="/">

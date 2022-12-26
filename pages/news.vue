@@ -1,5 +1,5 @@
 <template>
-    <div class="py-32 px-2">
+    <div class="page_body">
         <div class="flex justify-center">
             <ol>
                 <li class="border-l-2 border-green-600">
@@ -9,12 +9,18 @@
                         <path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path>
                         </svg>
                     </div>
-                    <div class="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-md ml-6 mb-10">
+                    <div class="block p-6 rounded-lg shadow-lg bg-lite-neptune max-w-md ml-6 mb-10">
                         <div class="flex justify-between mb-4">
-                        <a href="#!" class="font-medium text-green-600 hover:text-green-700 focus:text-green-800 duration-300 transition ease-in-out text-sm">Awesome Employers</a>
-                        <a href="#!" class="font-medium text-green-600 hover:text-green-700 focus:text-green-800 duration-300 transition ease-in-out text-sm">21 / 12 / 2021</a>
+                        <a href="#!" class="font-medium text-green-600 hover:text-green-700 focus:text-green-800 duration-300 transition ease-in-out text-sm">最新ニュース</a>
+                        <a href="#!" class="font-medium text-green-600 hover:text-green-700 focus:text-green-800 duration-300 transition ease-in-out text-sm">2022/12/31</a>
                         </div>
-                        <p class="text-green-700 mb-6">Voluptatibus temporibus esse illum eum aspernatur, fugiat suscipit natus! Eum corporis illum nihil officiis tempore. Excepturi illo natus libero sit doloremque, laborum molestias rerum pariatur quam ipsam necessitatibus incidunt, explicabo.</p>
+                        <p class="text-green-700 mb-6">
+                            ABMEAはW杯終了後、自社での配信についてデータをいくつか発表している。
+                            前述のように、最も多く視聴されたのは日本対クロアチア戦だ。2位・3位と日本戦が続き、W杯決勝戦が4位に入った。
+                            視聴者のうち56％が試合をリアルタイムで見ており、翌日などにオンデマンド視聴した人、ダイジェスト版などを見たのは44％となっている。
+                            ほぼ半数の人が「生視聴」しているわけで、熱心なファンがABEMAで視聴したのであろうことが伺える。
+                            ライブ視聴が多かったということは、ABEMAにはそれだけ、同じ時間にアクセスが集中したということになる。
+                        </p>
                         <button type="button" class="inline-block px-4 py-1.5 bg-green-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-green-700 hover:shadow-lg focus:bg-green-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-green-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true">Preview</button>
                     </div>
                     </div>
@@ -26,7 +32,7 @@
                             <path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path>
                         </svg>
                     </div>
-                    <div class="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-md ml-6 mb-10">
+                    <div class="block p-6 rounded-lg shadow-lg bg-lite-neptune max-w-md ml-6 mb-10">
                         <div class="flex justify-between mb-4">
                         <a href="#!" class="font-medium text-gray-600 hover:text-gray-700 focus:text-gray-800 duration-300 transition ease-in-out text-sm">21 000 Job Seekers</a>
                         <a href="#!" class="font-medium text-gray-600 hover:text-gray-700 focus:text-gray-800 duration-300 transition ease-in-out text-sm">12 / 01 / 2022</a>
@@ -43,10 +49,10 @@
                             <path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm64-192c0-8.8 7.2-16 16-16h288c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16v-64zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path>
                         </svg>
                     </div>
-                    <div class="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-md ml-6 mb-10">
+                    <div class="block p-6 rounded-lg shadow-lg bg-lite-neptune max-w-md ml-6 mb-10">
                         <div class="flex justify-between mb-4">
                         <a href="#!" class="font-medium text-gray-600 hover:text-gray-700 focus:text-gray-800 duration-300 transition ease-in-out text-sm">ほげほげ</a>
-                        <a href="#!" class="font-medium text-gray-600 hover:text-gray-700 focus:text-gray-800 duration-300 transition ease-in-out text-sm">2022/12/31</a>
+                        <a href="#!" class="font-medium text-gray-600 hover:text-gray-700 focus:text-gray-800 duration-300 transition ease-in-out text-sm">2022/11/31</a>
                         </div>
                         <p class="text-gray-700 mb-6">
                             ウクライナの前線から数百キロ離れたロシアのエンゲリス空軍基地で爆発音がしたと、ウクライナとロシアのメディアが２６日未明に報じた。

@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h3 class="ptitle">TOPページ</h3>
+    <div class="page_body">
+        <h3>トップページ</h3>
     </div>
 </template>
 
