@@ -8,7 +8,7 @@
                     </a>
                 </div>
                 <div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
-                    <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
+                    <ul class="list-reset flex justify-between flex-1 md:flex-none items-center text-sm lg:text-lg">
                         <li class="mr-3">
                             <a v-bind:class="[links['top'] == true ? 'header_link_active' : 'header_link_inactive']" href="/" v-cloak>トップ</a>
                         </li>
