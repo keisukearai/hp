@@ -1,0 +1,30 @@
+/* purgecss start ignore */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+/* purgecss end ignore */
+@import 'tailwindcss/utilities';
+/* @import './custome'; */
+
+.ptitle {
+    @apply text-2xl text-steam-black font-bold mb-6 ml-3;
+}
+
+@media (min-width:768px) {
+    .ptitle {
+        @apply mt-20;
+    }
+}
+
+@media (max-width:767px) {
+    .ptitle {
+        @apply mt-32;
+    }
+}
+
+.header_link_active {
+    @apply inline-block text-steam-black font-bold py-2 px-4 animate-bounce;
+}
+
+.header_link_inactive {
+    @apply inline-block text-stj-mist py-2 px-4;
+}
