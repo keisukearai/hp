@@ -26,5 +26,9 @@
 }
 
 .header_link_inactive {
-    @apply inline-block text-stj-mist py-2 px-4;
+    @apply inline-block text-stj-mist py-2 px-4 delay-100 duration-100 transform transition;
+}
+
+.header_link_inactive:hover {
+    @apply text-white scale-125;
 }
