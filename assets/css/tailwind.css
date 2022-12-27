@@ -24,3 +24,7 @@
 .page_body {
     @apply pt-32 pb-16 px-2;
 }
+
+.main_body {
+    background: #ced7dc url('/image/giraffe.svg') repeat center center !important;
+}
