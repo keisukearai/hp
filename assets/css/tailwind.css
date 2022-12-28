@@ -26,5 +26,5 @@
 }
 
 .main_body {
-    background: #ced7dc url('/image/giraffe.svg') repeat center center !important;
+    background: #ced7dc url('/image/giraffe.svg') no-repeat right bottom !important;
 }

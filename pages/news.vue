@@ -74,7 +74,28 @@
 
 <script>
 export default {
-    layout: 'default'
+    layout: 'default',
+    data: () => ({
+        hostname: "",
+    }),
+    mounted() {
+        this.hostname = window.location.hostname;
+        console.log(this.hostname);
+    },
+    async asyncData({ $axios }) {
+        try {
+            // 取得先のURL
+            const url = "http://" + this.hostname + ":8000/news";
+            // リクエスト（Get）
+            const response = await $axios.$get(url);
+            // 配列で返ってくるのでJSONにして返却
+            return {
+                posts: response
+            };
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }
 </script>
 
