@@ -83,6 +83,7 @@ export default {
             const url = "http://localhost:8000/news";
             // リクエスト（Get）
             const response = await $axios.$get(url);
+            console.log(response);
             // 配列で返ってくるのでJSONにして返却
             return {
                 posts: response
