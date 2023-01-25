@@ -10,7 +10,7 @@
 }
 
 .header_link_active {
-    @apply inline-block text-steam-black font-bold py-2 px-4 animate-bounce;
+    @apply inline-block text-steam-black font-bold py-2 px-4;
 }
 
 .header_link_inactive {

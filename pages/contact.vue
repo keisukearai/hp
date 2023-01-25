@@ -37,7 +37,12 @@
 
 <script>
 export default {
-    layout: 'default'
+    layout: 'default',
+    head() {
+        return {
+            title: '問合せ'
+        }
+    }
 }
 </script>
 

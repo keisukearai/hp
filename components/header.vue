@@ -3,9 +3,8 @@
         <nav class="bg-white p-2 mt-0 fixed w-full z-10 top-0">
             <div class="container mx-auto flex flex-wrap items-center">
                 <div class="flex w-full md:w-1/2 justify-center md:justify-start text-steam-black font-extrabold">
-                    <img src="/image/tigerleg.svg" />
                     <a class="no-underline text-2xl hover:text-stj-mist" href="/">
-                        <span class="pl-2"> 株式会社 XXX</span>
+                        <span class="pl-2"> コトラ合同会社</span>
                     </a>
                 </div>
                 <div class="flex w-full pt-2 content-center justify-between md:w-1/2 md:justify-end">
@@ -14,13 +13,13 @@
                             <a v-bind:class="[links['top'] == true ? 'header_link_active' : 'header_link_inactive']" href="/" v-cloak>トップ</a>
                         </li>
                         <li class="md:mr-3">
-                            <a v-bind:class="[links['company'] == true ? 'header_link_active' : 'header_link_inactive']" href="company">会社概要</a>
+                            <a v-bind:class="[links['company'] == true ? 'header_link_active' : 'header_link_inactive']" href="/company">会社概要</a>
                         </li>
                         <li class="md:mr-3">
-                            <a v-bind:class="[links['news'] == true ? 'header_link_active' : 'header_link_inactive']" href="news" v-cloak>ニュース</a>
+                            <a v-bind:class="[links['news'] == true ? 'header_link_active' : 'header_link_inactive']" href="/news" v-cloak>ニュース</a>
                         </li>
                         <li class="md:mr-3">
-                            <a v-bind:class="[links['contact'] == true ? 'header_link_active' : 'header_link_inactive']" href="contact">問合せ</a>
+                            <a v-bind:class="[links['contact'] == true ? 'header_link_active' : 'header_link_inactive']" href="/contact">問合せ</a>
                         </li>
                     </ul>
                 </div>

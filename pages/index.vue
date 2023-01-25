@@ -13,7 +13,12 @@
 
 <script>
 export default {
-    layout: 'default'
+    layout: 'default',
+    head() {
+        return {
+            title: 'トップ'
+        }
+    }
 }
 </script>
 

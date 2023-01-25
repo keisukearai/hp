@@ -3,7 +3,9 @@
         <Header />
         <main class="bg-white">
             <div class="flex flex-col min-h-screen">
-                <nuxt />
+                <transition name="page">
+                    <nuxt />
+                </transition>
             </div>
         </main>
         <Footer />
@@ -22,4 +24,11 @@ export default {
 </script>
 
 <style scoped>
+
+.page-enter {
+    opacity: 0;
+}
+.page-enter-active {
+    transition: opacity 10s;
+}
 </style>

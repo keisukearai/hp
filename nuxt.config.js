@@ -5,7 +5,8 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: process.env.npm_package_name || '',
+    // title: process.env.npm_package_name || '',
+    titleTemplate:  'コトラ合同会社 | %s',
     htmlAttrs: {
       lang: 'ja'
     },
@@ -45,13 +46,26 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxt/content',
+    '@nuxtjs/dayjs',
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    proxy: true
+    // proxy: true
+    baseURL: 'http://localhost:8000'
+  },
+  publicRuntimeConfig: {
+    axios: {
+      browserBaseURL: process.env.BROWSER_BASE_URL
+    }
+  },
+  privateRuntimeConfig: {
+    axios: {
+      baseURL: process.env.BASE_URL
+    }
   },
   /*
   ** Build configuration
