@@ -8,15 +8,15 @@
                             会社名
                         </th>
                         <td class="p-5">
-                            コトラ合同会社
+                            {{ company.name }}
                         </td>
                     </tr>
                     <tr>
                         <th class="bg-lite-neptune p-5">
-                            代表取締役
+                            代表者
                         </th>
                         <td class="p-5">
-                            ほげほげ もごお
+                            {{ company.representative }}
                         </td>
                     </tr>
                     <tr>
@@ -24,8 +24,8 @@
                             所在地
                         </th>
                         <td class="p-5">
-                            <div>956-1234</div>
-                            大阪府大阪市浪速区ほげほげ13-3-211
+                            <div>{{ company.zip }}</div>
+                            <div>{{ company.address }}</div>
                         </td>
                     </tr>
                     <tr>
@@ -33,19 +33,16 @@
                             設立
                         </th>
                         <td class="p-5">
-                            2022/03/01
+                            {{ company.established }}
                         </td>
                     </tr>
                     <tr>
                         <th class="bg-lite-neptune p-5">
                             事業内容
                         </th>
-                        <td class="p-5">
-                            <div class="mx-5">
-                                <ul class="list-disc">
-                                    <li>システムインテグレーション</li>
-                                    <li>業務システム開発</li>
-                                </ul>
+                        <td class="p-5 pt-0">
+                            <div class="whitespace-pre-line">
+                                {{ company.business_content }}
                             </div>
                         </td>
                     </tr>
@@ -54,7 +51,7 @@
                             資本金
                         </th>
                         <td class="p-5">
-                            100万円
+                            {{ company.capital }}
                         </td>
                     </tr>
                     <tr>
@@ -62,7 +59,7 @@
                             取引銀行
                         </th>
                         <td class="p-5">
-                            PayPay銀行
+                            {{ company.business_bank }}
                         </td>
                     </tr>
                     <tr>
@@ -70,7 +67,7 @@
                             決算期
                         </th>
                         <td class="p-5">
-                            1月末
+                            {{ company.accounting_period }}
                         </td>
                     </tr>
                 </tbody>
@@ -85,6 +82,24 @@ export default {
     head() {
         return {
             title: '会社概要'
+        }
+    },
+    async asyncData({ $axios }) {
+        // 取得先のURL(nuxt.config.js)
+        const url = "/hp/company"
+
+        try {
+            console.log("axios start:" + url)
+            // リクエスト
+            const response = await $axios.$get(url)
+            // 返却 dataにマージ
+            return {
+                company: response.company[0]
+            }
+        } catch (e) {
+            console.log("axios erorr")
+            console.log(e)
+            return
         }
     }
 }

@@ -32,6 +32,7 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/constants.js',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -46,25 +47,20 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
     '@nuxt/content',
-    '@nuxtjs/dayjs',
+    '@nuxtjs/dayjs'
   ],
   /*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    // proxy: true
-    baseURL: 'http://localhost:8000'
+    proxy: true
   },
-  publicRuntimeConfig: {
-    axios: {
-      browserBaseURL: process.env.BROWSER_BASE_URL
-    }
-  },
-  privateRuntimeConfig: {
-    axios: {
-      baseURL: process.env.BASE_URL
+  proxy: {
+    '/hp/company': {
+      target: 'http://127.0.0.1:8000',
     }
   },
   /*
@@ -76,8 +72,5 @@ export default {
     */
     extend (config, ctx) {
     }
-  },
-  server: {
-    host: '0.0.0.0'
   }
 }
