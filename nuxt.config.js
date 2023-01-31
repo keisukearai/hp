@@ -33,6 +33,7 @@ export default {
   */
   plugins: [
     '~/plugins/constants.js',
+    '~/plugins/axios',
   ],
   /*
   ** Nuxt.js dev-modules
@@ -48,7 +49,6 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
-    '@nuxt/content',
     '@nuxtjs/dayjs'
   ],
   /*
@@ -65,6 +65,11 @@ export default {
       changeOrigin: true,
     },
     '/hp/news': {
+      // target: 'https://autoarai.com',
+      target: 'http://127.0.0.1:8000',
+      changeOrigin: true,
+    },
+    '/hp/inquiry': {
       // target: 'https://autoarai.com',
       target: 'http://127.0.0.1:8000',
       changeOrigin: true,
