@@ -23,7 +23,6 @@ export default {
     async fetch() {
         // URL
         const url = this.$CONST.API_BASE_URL + this.$CONST.API_URL_COMPANY
-        // const url = "/hp/company"
         const response = await fetch(
             url
         ).then(res => res.json())
