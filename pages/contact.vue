@@ -1,9 +1,17 @@
 <template>
-    <div class="page_body">
-        <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
-            <div class="max-w-screen-md grid sm:grid-cols-2 gap-4 mx-auto">
+    <section class="text-gray-600 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-12">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+                    お問合せフォーム
+                </h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                    お困りごとがあれば、なんなりとお申し付け下さい。
+                </p>
+            </div>
+            <div class="lg:w-1/2 md:w-2/3 mx-auto">
                 <!-- 正常メッセージエリア -->
-                <div class="sm:col-span-2" v-if="info_msg_area">
+                <div class="sm:col-span-2 pb-10" v-if="info_msg_area">
                     <div class="flex w-full overflow-hidden bg-white rounded-lg shadow-md">
                         <div class="flex items-center justify-center w-12 bg-blue-500">
                             <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -19,7 +27,7 @@
                     </div>
                 </div>
                 <!-- エラーメッセージエリア -->
-                <div class="sm:col-span-2" v-if="error_msg_area">
+                <div class="sm:col-span-2 pb-10" v-if="error_msg_area">
                     <div class="flex w-full overflow-hidden bg-white rounded-lg shadow-md">
                         <div class="flex items-center justify-center w-12 bg-red-500">
                             <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -36,52 +44,90 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <label for="iname" class="inline-block text-gray-800 text-sm sm:text-base mb-2">お名前 <span class="text-red-500 text-xs">*必須</span></label>
-                    <input type="text" v-model="name" id="iname"
-                        v-bind:class="{ 'inuput_error': valid_name }"
-                        class="w-full input_class"
-                    />
-                    <span v-text="msg_name" class="text-red-500 text-sm"></span>
-                </div>
-
-                <div class="sm:col-span-2">
-                    <label for="email" class="inline-block text-gray-800 text-sm sm:text-base mb-2">メール <span class="text-red-500 text-xs">*必須</span></label>
-                    <input type="email" v-model="mail" id="email"
-                    v-bind:class="{ 'inuput_error': valid_mail }"
-                    class="w-full input_class"
-                    />
-                    <span v-text="msg_mail" class="text-red-500 text-sm"></span>
-                </div>
-
-                <div class="sm:col-span-2">
-                    <label for="title" class="inline-block text-gray-800 text-sm sm:text-base mb-2">表題 <span class="text-red-500 text-xs">*必須</span></label>
-                    <input name="title" v-model="title" id="title"
-                    v-bind:class="{ 'inuput_error': valid_title }"
-                    class="w-full input_class"
-                    />
-                    <span v-text="msg_title" class="text-red-500 text-sm"></span>
-                </div>
-
-                <div class="sm:col-span-2">
-                    <label for="content" class="inline-block text-gray-800 text-sm sm:text-base mb-2">内容 <span class="text-red-500 text-xs">*必須</span></label>
-                    <textarea name="content" v-model="content" id="content"
-                    v-bind:class="{ 'inuput_error': valid_content }"
-                    class="w-full h-64 input_class"></textarea>
-                    <span v-text="msg_content" class="text-red-500 text-sm"></span>
-                </div>
-
-                <div class="sm:col-span-2 flex justify-between items-center">
-                    <button v-on:click="send"
-                    v-bind:disabled="isSend"
-                    v-bind:class="(isSend == true? 'bg-gray-500': 'bg-indigo-500 hover:bg-indigo-600')"
-                    class="inline-block active:bg-indigo-700 focus-visible:ring ring-indigo-300 text-white text-xs md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-4 py-2">
-                        送信する
-                    </button>
+                <div class="flex flex-wrap -m-2">
+                    <div class="p-2 w-1/2">
+                        <div class="relative">
+                            <label for="name" class="leading-7 text-sm text-gray-600">名前</label>
+                            <input type="text" id="name"
+                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                v-model="name"
+                                v-bind:class="{ 'inuput_error': valid_name }"
+                            />
+                            <span v-text="msg_name" class="text-red-500 text-sm"></span>
+                        </div>
+                    </div>
+                    <div class="p-2 w-1/2">
+                        <div class="relative">
+                            <label for="email" class="leading-7 text-sm text-gray-600">メールアドレス</label>
+                            <input type="email" id="email"
+                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                v-model="mail"
+                                v-bind:class="{ 'inuput_error': valid_mail }"
+                            />
+                            <span v-text="msg_mail" class="text-red-500 text-sm"></span>
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <div class="relative">
+                            <label for="email" class="leading-7 text-sm text-gray-600">表題</label>
+                            <input type="text" id="title"
+                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                v-model="title"
+                                v-bind:class="{ 'inuput_error': valid_title }"
+                            />
+                            <span v-text="msg_title" class="text-red-500 text-sm"></span>
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <div class="relative">
+                            <label for="content" class="leading-7 text-sm text-gray-600">内容</label>
+                            <textarea id="content"
+                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                                v-model="content"
+                                v-bind:class="{ 'inuput_error': valid_content }"
+                            ></textarea>
+                            <span v-text="msg_content" class="text-red-500 text-sm"></span>
+                        </div>
+                    </div>
+                    <div class="p-2 w-full">
+                        <button class="flex mx-auto text-white border-0 py-2 px-8 focus:outline-none rounded text-lg"
+                        v-on:click="send"
+                        v-bind:disabled="isSend"
+                        v-bind:class="(isSend == true? 'bg-gray-500 cursor-auto': 'bg-indigo-500 hover:bg-indigo-600')"
+                        >送信</button>
+                    </div>
+                    <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                        <div class="pb-8">
+                            <a class="text-indigo-500">example@email.com</a>
+                        </div>
+                        <span class="inline-flex">
+                            <a class="text-gray-500">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                                </svg>
+                            </a>
+                            <a class="ml-4 text-gray-500">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                                </svg>
+                            </a>
+                            <a class="ml-4 text-gray-500">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                    <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+                                </svg>
+                            </a>
+                            <a class="ml-4 text-gray-500">
+                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                                </svg>
+                            </a>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
