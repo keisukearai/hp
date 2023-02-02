@@ -5,6 +5,6 @@ const CONST = {
 }
 
 export default (context, inject) => {
-    // console.log("server:" + process.server)
+    console.log("server:" + process.server)
     inject('CONST', CONST)
 }
