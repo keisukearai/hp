@@ -60,18 +60,18 @@ export default {
   },
   proxy: {
     '/hp/company': {
-      // target: 'https://autoarai.com',
-      target: 'http://127.0.0.1:8000',
+      target: 'https://autoarai.com',
+      // target: 'http://127.0.0.1:8000',
       changeOrigin: true,
     },
     '/hp/news': {
-      // target: 'https://autoarai.com',
-      target: 'http://127.0.0.1:8000',
+      target: 'https://autoarai.com',
+      // target: 'http://127.0.0.1:8000',
       changeOrigin: true,
     },
     '/hp/inquiry': {
-      // target: 'https://autoarai.com',
-      target: 'http://127.0.0.1:8000',
+      target: 'https://autoarai.com',
+      // target: 'http://127.0.0.1:8000',
       changeOrigin: true,
     }
   },
