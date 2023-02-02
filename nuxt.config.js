@@ -8,12 +8,21 @@ export default {
     // title: process.env.npm_package_name || '',
     titleTemplate:  'コトラ合同会社 | %s',
     htmlAttrs: {
-      lang: 'ja'
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#'
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      { hid: 'description', name: 'description', content: 'コトラ合同会社ホームページ' || '' },
+      { hid: 'keywords', name: 'keywords', content: '受託開発,ITコンサルティング,プログラミング教育' },
+
+      { hid: 'og:site_name', property: 'og:site_name', content: 'コトラ合同会社' },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: 'https://kotoragk.com/' },
+      { hid: 'og:title', property: 'og:title', content: 'コトラ合同会社ホームページ' },
+      { hid: 'og:description', property: 'og:description', content: '受託開発、ITコンサルティング、プログラミング教育を行っています。' },
+      { hid: 'og:image', property: 'og:image', content: '/favicon.ico' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
