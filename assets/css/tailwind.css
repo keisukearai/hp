@@ -22,7 +22,7 @@
 }
 
 .input_class {
-    @apply text-gray-800 border rounded outline-none transition duration-100 px-3 py-2;
+    @apply w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out;
 }
 
 .main_body {

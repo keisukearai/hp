@@ -1,14 +1,14 @@
 <template>
     <section class="text-gray-600 body-font">
         <div class="container px-5 pt-24 pb-16 mx-auto">
-            <div class="flex flex-wrap w-full mb-5 lg:mb-16">
+            <div class="flex flex-wrap w-full my-5 lg:mb-16">
                 <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
                         弊社の会社概要
                     </h1>
                     <div class="h-1 w-20 bg-indigo-500 rounded"></div>
                 </div>
-                <div class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+                <div class="lg:w-1/2 w-full leading-relaxed text-gray-700">
                     <div class="inline-flex">
                         Mission：ITシステムを通じて世界をよりよくする。
                     </div>

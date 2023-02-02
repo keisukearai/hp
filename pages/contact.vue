@@ -1,14 +1,14 @@
 <template>
     <section class="text-gray-600 body-font">
         <div class="container px-5 pt-24 pb-12 mx-auto">
-            <div class="flex flex-wrap w-full mb-5 lg:mb-16">
+            <div class="flex flex-wrap w-full my-5 lg:mb-16">
                 <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
                         お問合せフォーム
                     </h1>
                     <div class="h-1 w-20 bg-indigo-500 rounded"></div>
                 </div>
-                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+                <p class="lg:w-1/2 w-full leading-relaxed text-gray-700">
                     お困りごとがあれば、なんなりとお申し付け下さい。
                 </p>
             </div>
@@ -52,7 +52,7 @@
                         <div class="relative">
                             <label for="name" class="leading-7 text-sm text-gray-600">名前</label>
                             <input type="text" id="name"
-                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                class="input_class focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
                                 v-model="name"
                                 v-bind:class="{ 'inuput_error': valid_name }"
                             />
@@ -63,7 +63,7 @@
                         <div class="relative">
                             <label for="email" class="leading-7 text-sm text-gray-600">メールアドレス</label>
                             <input type="email" id="email"
-                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                class="input_class focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
                                 v-model="mail"
                                 v-bind:class="{ 'inuput_error': valid_mail }"
                             />
@@ -74,7 +74,7 @@
                         <div class="relative">
                             <label for="email" class="leading-7 text-sm text-gray-600">表題</label>
                             <input type="text" id="title"
-                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                                class="input_class focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
                                 v-model="title"
                                 v-bind:class="{ 'inuput_error': valid_title }"
                             />
@@ -85,7 +85,7 @@
                         <div class="relative">
                             <label for="content" class="leading-7 text-sm text-gray-600">内容</label>
                             <textarea id="content"
-                                class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                                class="input_class focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-200"
                                 v-model="content"
                                 v-bind:class="{ 'inuput_error': valid_content }"
                             ></textarea>
@@ -93,13 +93,13 @@
                         </div>
                     </div>
                     <div class="p-2 w-full">
-                        <button class="flex mx-auto text-white border-0 py-2 px-8 focus:outline-none rounded text-lg"
+                        <button class="flex mx-auto text-white border-0 py-2 px-8 focus:outline-none rounded"
                         v-on:click="send"
                         v-bind:disabled="isSend"
                         v-bind:class="(isSend == true? 'bg-gray-500 cursor-auto': 'bg-indigo-500 hover:bg-indigo-600')"
                         >送信</button>
                     </div>
-                    <div class="p-2 w-full pt-8 mt-8 border-t border-gray-200 text-center">
+                    <div class="p-2 w-full pt-8 mt-4 border-t border-gray-200 text-center">
                         <div class="pb-8">
                             <a class="text-indigo-500" v-bind:href="'mailto:' + company.email">
                                 {{ company.mail }}
