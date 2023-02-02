@@ -28,3 +28,7 @@
 .main_body {
     background: #ced7dc url('/image/giraffe.svg') no-repeat right bottom !important;
 }
+
+code {
+    @apply text-white bg-gray-800 rounded-md p-1 inline-block w-full whitespace-no-wrap;
+}
