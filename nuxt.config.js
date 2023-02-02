@@ -59,10 +59,10 @@ export default {
     '@nuxtjs/axios',
     '@nuxtjs/proxy',
     '@nuxtjs/dayjs',
-    '@nuxtjs/google-gtag', {
+    ['@nuxtjs/google-gtag', {
       id: 'G-BL5PV6CW7Z',
       debug: true,
-    }
+    }]
   ],
   /*
   ** Axios module configuration
