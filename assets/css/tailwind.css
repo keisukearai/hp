@@ -14,7 +14,7 @@
 }
 
 .header_link_inactive:hover {
-    @apply text-lite-neptune scale-125;
+    @apply text-steam-black scale-125 font-bold;
 }
 
 .inuput_error {

@@ -1,22 +1,28 @@
 <template>
     <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-            <div class="flex flex-wrap w-full mb-20">
+        <div class="container px-5 pt-24 pb-16 mx-auto">
+            <div class="flex flex-wrap w-full mb-5 lg:mb-16">
                 <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
                         弊社の会社概要
                     </h1>
                     <div class="h-1 w-20 bg-indigo-500 rounded"></div>
                 </div>
-                <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">
-                    Mission：ITシステムを通じて世界をよりよくする。
-                    Vision：お客様のご要望に答え続ける。
-                    Value：スピード感を大切にしてお客様に寄り添う。
-                </p>
+                <div class="lg:w-1/2 w-full leading-relaxed text-gray-500">
+                    <div class="inline-flex">
+                        Mission：ITシステムを通じて世界をよりよくする。
+                    </div>
+                    <div class="inline-flex">
+                        Vision：お客様のご要望に答え続ける。
+                    </div>
+                    <div class="inline-flex">
+                        Value：スピード感を大切にしてお客様に寄り添う。
+                    </div>
+                </div>
             </div>
             <div class="flex flex-wrap -m-4">
-                <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-full xl:w-1/3 md:w-1/2 p-3">
+                    <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
                         <div class="flex">
                             <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
@@ -32,8 +38,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-full xl:w-1/3 md:w-1/2 p-3">
+                    <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
                         <div class="flex">
                             <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
@@ -52,8 +58,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-full xl:w-1/3 md:w-1/2 p-3">
+                    <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
                         <div class="flex">
                             <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
@@ -71,8 +77,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-full xl:w-1/3 md:w-1/2 p-3">
+                    <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
                         <div class="flex">
                             <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
@@ -91,10 +97,10 @@
                         </p>
                     </div>
                 </div>
-                <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-full xl:w-1/3 md:w-1/2 p-3">
+                    <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
                         <div class="flex">
-                            <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                            <div class="w-10 h-10 inline-flex items-center justify-center rounded-lg bg-indigo-100 text-indigo-500 mb-4">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"></path>
                                 </svg>
@@ -110,8 +116,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-full xl:w-1/3 md:w-1/2 p-3">
+                    <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
                         <div class="flex">
                             <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
@@ -129,8 +135,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-full xl:w-1/3 md:w-1/2 p-3">
+                    <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
                         <div class="flex">
                             <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
@@ -148,8 +154,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="xl:w-1/3 md:w-1/2 p-4">
-                    <div class="border border-gray-200 p-6 rounded-lg">
+                <div class="w-full xl:w-1/3 md:w-1/2 p-3">
+                    <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
                         <div class="flex">
                             <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
                                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">

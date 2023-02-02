@@ -14,7 +14,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'コトラ合同会社ホームページ' || '' },
+      { hid: 'description', name: 'description', content: 'コトラ合同会社のサイトとなります。システム開発の請負い、社内システムの改善提案、プログラミング教育を行っております。' || '' },
       { hid: 'keywords', name: 'keywords', content: '受託開発,ITコンサルティング,プログラミング教育' },
 
       { hid: 'og:site_name', property: 'og:site_name', content: 'コトラ合同会社' },
