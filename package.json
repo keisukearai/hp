@@ -18,7 +18,8 @@
     "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/proxy": "^2.1.0",
     "nuxt": "^2.0.0",
-    "vue-sliding-pagination": "^1.3.2"
+    "vue-sliding-pagination": "^1.3.2",
+    "vuejs-paginate": "^2.1.0"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^1.0.0"

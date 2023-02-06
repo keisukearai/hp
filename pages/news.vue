@@ -12,9 +12,14 @@
                     最新のトピック、気になる技術情報をつぶやきます。気になる方はチェックしてみて下さい。
                 </p>
             </div>
+            <div class="text-lg">全{{ newsCount }}件</div>
+            <!-- <input type="text"
+                model="word"
+                placeholder="hogehoge"
+            /> -->
             <div class="flex justify-center">
                 <ol>
-                    <div v-for="article in news" v-bind:key="article.slug">
+                    <div v-for="article in news" v-bind:key="article.id">
                         <li class="border-l-2 border-gray-600 mb-10">
                             <div class="md:flex flex-start">
                                 <div class="bg-gray-600 w-6 h-6 flex items-center justify-center rounded-full -ml-3.5">
@@ -42,6 +47,15 @@
                     </div>
                 </ol>
             </div>
+            <client-only>
+                <div class="text-center">
+                    <sliding-pagination
+                        :current="currentPage"
+                        :total="totalPages"
+                        @page-change="paginatioHandler"
+                    />
+                </div>
+            </client-only>
         </div>
     </section>
 </template>
@@ -49,6 +63,12 @@
 <script>
 export default {
     layout: 'default',
+    data() {
+        return {
+            // word: 'ニュース',
+            currentPage: 1
+        }
+    },
     head() {
         return {
             title: 'トップ'
@@ -62,19 +82,52 @@ export default {
             console.log("axios news start:" + url)
             // リクエスト
             const response = await $axios.$get(url)
-            console.log(response)
+            // console.log(response)
             // 返却 dataにマージ
             return {
-                news: response.news
+                news: response.news,
+                totalPages: response.total_pages,
+                newsCount: response.news_count,
             }
         } catch (e) {
             console.log("axios erorr")
             console.log(e)
             return
         }
+    },
+    methods: {
+        async paginatioHandler(selectedPage) {
+            // console.log("selectedPage:" + selectedPage)
+            // console.log("word:" + this.word)
+            this.currentPage = selectedPage
+
+            // URL
+            const url = this.$CONST.API_BASE_URL + this.$CONST.API_URL_NEWS + "?page=" + selectedPage
+            console.log("url:" + url)
+            const response = await fetch(
+                url
+            ).then(res => res.json())
+            // console.log(response)
+            // 一覧反映
+            this.news = response.news
+        }
     }
 }
 </script>
 
 <style>
+.c-sliding-pagination__list-element {
+    padding: 0.6rem 1rem;
+    margin-right: 1rem;
+    background-color: #718096;
+}
+.c-sliding-pagination__list-element--active {
+    background: #1F2937;
+}
+.c-sliding-pagination__list-element:hover {
+    background: #9CA3AF;
+}
+.c-sliding-pagination__list-element--disabled {
+    background: #ffffff;
+}
 </style>

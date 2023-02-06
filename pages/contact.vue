@@ -1,6 +1,6 @@
 <template>
     <section class="text-gray-600 body-font">
-        <div class="container px-5 pt-24 pb-12 mx-auto">
+        <div class="container px-5 pt-24 pb-6 mx-auto">
             <div class="flex flex-wrap w-full my-5 lg:mb-16">
                 <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">

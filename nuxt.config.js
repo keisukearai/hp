@@ -41,8 +41,9 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/constants.js',
+    '~/plugins/constants',
     '~/plugins/axios',
+    {src: '~/plugins/sliding-paginate', mode:'client'},
   ],
   /*
   ** Nuxt.js dev-modules
