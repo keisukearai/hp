@@ -147,17 +147,17 @@ export default {
 
 <style>
 .c-sliding-pagination__list-element {
-    padding: 0.6rem 1rem;
-    margin-right: 1rem;
-    background-color: #718096;
+    padding: 0.6rem 1rem !important;
+    margin-right: 1rem !important;
+    background-color: #718096 !important;
 }
 .c-sliding-pagination__list-element--active {
-    background: #1F2937;
+    background: #1F2937 !important;
 }
 .c-sliding-pagination__list-element:hover {
-    background: #9CA3AF;
+    background: #9CA3AF !important;
 }
 .c-sliding-pagination__list-element--disabled {
-    background: #ffffff;
+    background: #ffffff !important;
 }
 </style>
