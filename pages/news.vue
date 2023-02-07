@@ -66,7 +66,7 @@
                     </ol>
                 </div>
                 <client-only>
-                    <div class="text-center">
+                    <div class="text-center" v-if="newsCount != 0">
                         <sliding-pagination
                             v-bind:current="currentPage"
                             v-bind:total="totalPages"
@@ -90,7 +90,7 @@ export default {
     },
     head() {
         return {
-            title: 'トップ'
+            title: 'ニュース'
         }
     },
     async asyncData({ $axios }) {
@@ -120,7 +120,7 @@ export default {
             this.currentPage = selectedPage
             // URL
             const url = this.$CONST.API_BASE_URL + this.$CONST.API_URL_NEWS + "?page=" + selectedPage + "&word=" + this.word
-            // console.log("url:" + url)
+            console.log("url:" + url)
             const response = await fetch(
                 url
             ).then(res => res.json())
@@ -135,7 +135,7 @@ export default {
             const response = await fetch(
                 url
             ).then(res => res.json())
-
+            console.log(response)
             // 反映
             this.news = response.news
             this.totalPages = response.total_pages
