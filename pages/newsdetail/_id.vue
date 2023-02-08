@@ -15,14 +15,19 @@
             <div class="flex justify-center">
                 <article>
                     <div class="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-xl ml-6 mb-10 w-11/12">
-                            <div>{{ $dayjs(newsdetail.entry_date).format('YYYY/MM/DD HH:mm:ss') }}</div>
-                            <div class="text-lg">{{ newsdetail.title }}<span class="text-sm px-3">{{ category.category_name }}</span></div>
-                        <br />
+                        <div class="text-lg pb-3">
+                            {{ newsdetail.title }}<span class="text-sm px-3">{{ category.category_name }}</span>
+                        </div>
                         <div v-html="newsdetail.content"></div>
-                        <div class="flex justify-end">
-                            <a href='/news' class="inline-block px-4 py-1.5 bg-gray-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true">
-                                back
-                            </a>
+                        <div class="flex">
+                            <div class="flex justify-start">
+                                {{ $dayjs(newsdetail.entry_date).format('YYYY/MM/DD HH:mm:ss') }}
+                            </div>
+                            <div class="flex justify-end ml-2">
+                                <a href='/news' class="inline-block px-4 py-1 bg-gray-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true">
+                                    back
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </article>
