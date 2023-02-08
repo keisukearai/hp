@@ -67,7 +67,7 @@
                                     </div>
                                     <div class="flex justify-between">
                                         <div class="font-medium text-gray-600 duration-300 transition ease-in-out text-sm pr-5">
-                                            {{ $dayjs(article.updatedAt).format('YYYY/MM/DD') }}
+                                            {{ $dayjs(article.updatedAt).format('YYYY/MM/DD HH:mm:ss') }}
                                         </div>
                                         <nuxt-link v-bind:to="'/newsdetail/' + article.id + '/'" class="inline-block px-4 py-1 bg-gray-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-gray-700 hover:shadow-lg focus:bg-gray-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-gray-800 active:shadow-lg transition duration-150 ease-in-out" data-mdb-ripple="true">
                                             Preview
