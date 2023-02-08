@@ -62,7 +62,7 @@
                                 <div class="block p-6 rounded-lg shadow-lg bg-gray-100 ml-6 mb-10">
                                     <div class="flex justify-between pb-5">
                                         <nuxt-link v-bind:to="'/newsdetail/' + article.id + '/'" class="font-medium text-gray-600 hover:text-gray-700 focus:text-gray-800 duration-300 transition ease-in-out text-sm">
-                                            【{{ article.title }}<span class="text-sm px-3">{{ article.category_name }}</span>
+                                            {{ article.title }}<span class="text-sm px-3">{{ article.category_name }}</span>
                                         </nuxt-link>
                                     </div>
                                     <div class="flex justify-between">
