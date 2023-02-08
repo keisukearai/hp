@@ -15,7 +15,7 @@
             <div class="flex justify-center">
                 <article>
                     <div class="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-xl ml-6 mb-10 w-11/12">
-                        <div class="text-lg pb-3">
+                        <div class="text-lg pb-3 font-bold">
                             {{ newsdetail.title }}<span class="text-sm px-3">{{ category.category_name }}</span>
                         </div>
                         <div v-html="newsdetail.content"></div>
