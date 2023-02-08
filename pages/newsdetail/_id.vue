@@ -16,7 +16,7 @@
                 <article>
                     <div class="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-xl ml-6 mb-10 w-11/12">
                             <div>{{ $dayjs(newsdetail.updatedAt).format('YYYY/MM/DD') }}</div>
-                            <div class="text-lg">【{{ newsdetail.title }}】<span class="text-sm px-3">{{ category.category_name }}</span></div>
+                            <div class="text-lg">{{ newsdetail.title }}<span class="text-sm px-3">{{ category.category_name }}</span></div>
                         <br />
                         <div v-html="newsdetail.content"></div>
                         <div class="flex justify-end">
