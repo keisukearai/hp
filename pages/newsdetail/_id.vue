@@ -16,7 +16,7 @@
                 <article>
                     <div class="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-xl ml-6 mb-10 w-11/12">
                             <div>{{ $dayjs(newsdetail.updatedAt).format('YYYY/MM/DD') }}</div>
-                            <div class="text-lg">{{ newsdetail.title }}</div>
+                            <div class="text-lg">【{{ newsdetail.title }}】<span class="text-sm px-3">{{ category.category_name }}</span></div>
                         <br />
                         <div v-html="newsdetail.content"></div>
                         <div class="flex justify-end">
@@ -39,19 +39,20 @@ export default {
             title: 'ニュース詳細'
         }
     },
-    async asyncData({ $axios, params }) {
+    async asyncData({ $axios, $config, params }) {
         console.dir("params:" + params.id);
         // 取得先のURL(nuxt.config.js)
-        const url = `/hp/news/${params.id}/`
+        const url = `${ $config.API_URL_NEWS }/${ params.id }/`
 
         try {
-            console.log("axios start:" + url)
+            // console.log("axios start:" + url)
             // リクエスト
             const response = await $axios.$get(url)
-            console.log(response.newsdetail[0])
+            // console.log(response.newsdetail[0])
             // 返却 dataにマージ
             return {
-                newsdetail: response.newsdetail[0]
+                newsdetail: response.newsdetail[0],
+                category: response.category[0]
             }
         } catch (e) {
             console.log("axios erorr")

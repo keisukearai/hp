@@ -41,7 +41,6 @@ export default {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '~/plugins/constants',
     '~/plugins/axios',
     {src: '~/plugins/sliding-paginate', mode:'client'},
   ],
@@ -74,18 +73,15 @@ export default {
   },
   proxy: {
     '/hp/company': {
-      target: 'https://autoarai.com',
-      // target: 'http://127.0.0.1:8000',
+      target: process.env.API_BASE_URL,
       changeOrigin: true,
     },
     '/hp/news': {
-      target: 'https://autoarai.com',
-      // target: 'http://127.0.0.1:8000',
+      target: process.env.API_BASE_URL,
       changeOrigin: true,
     },
     '/hp/inquiry': {
-      target: 'https://autoarai.com',
-      // target: 'http://127.0.0.1:8000',
+      target: process.env.API_BASE_URL,
       changeOrigin: true,
     }
   },
@@ -98,5 +94,10 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  publicRuntimeConfig: {
+    API_BASE_URL: process.env.API_BASE_URL,
+    API_URL_COMPANY: process.env.API_URL_COMPANY,
+    API_URL_NEWS: process.env.API_URL_NEWS
   }
 }

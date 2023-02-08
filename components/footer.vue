@@ -25,10 +25,13 @@ export default {
     },
     async fetch() {
         // URL
-        const url = this.$CONST.API_BASE_URL + this.$CONST.API_URL_COMPANY
+        const url = this.$config.API_BASE_URL + this.$config.API_URL_COMPANY
         const response = await fetch(
             url
-        ).then(res => res.json())
+        ).then(res => res.json()
+        ).catch((error) => {
+            console.log(error)
+        })
         // console.log(response)
         this.footer = response.company[0];
     }
