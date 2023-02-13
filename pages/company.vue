@@ -173,6 +173,28 @@
                         </p>
                     </div>
                 </div>
+                <div class="w-full xl:w-1/3 md:w-1/2 p-3">
+                    <div class="border border-gray-200 p-6 rounded-lg shadow-sm">
+                        <div class="flex">
+                            <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                    <path d="M10.5 10.5c-.847 -.71 -2.132 -.658 -2.914 .116a1.928 1.928 0 0 0 0 2.768c.782 .774 2.067 .825 2.914 .116"></path>
+                                    <path d="M16.5 10.5c-.847 -.71 -2.132 -.658 -2.914 .116a1.928 1.928 0 0 0 0 2.768c.782 .774 2.067 .825 2.914 .116"></path>
+                                </svg>
+                            </div>
+                            <div class="inline-flex pt-2 mx-5">
+                                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">
+                                    法人番号
+                                </h2>
+                            </div>
+                        </div>
+                        <p class="leading-relaxed text-base">
+                            {{ company.corporate_number }}
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
