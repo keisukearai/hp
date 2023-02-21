@@ -149,7 +149,7 @@
                                 </h2>
                             </div>
                         </div>
-                        <p class="leading-relaxed text-base">
+                        <p class="leading-relaxed text-base whitespace-pre-line">
                             {{ company.business_bank }}
                         </p>
                     </div>
