@@ -12,7 +12,7 @@
                     <div class="inline-flex">
                         Mission：ITシステムを通じて世界をよりよくする。
                     </div>
-                    <div class="inline-flex">
+                    <div class="lg:inline-flex">
                         Vision：お客様のご要望に答え続ける。
                     </div>
                     <div class="inline-flex">
@@ -111,9 +111,9 @@
                                 </h2>
                             </div>
                         </div>
-                        <p class="leading-relaxed text-base whitespace-pre-line">
-                            {{ company.business_content }}
-                        </p>
+                        <p class="leading-relaxed text-base whitespace-pre-line"><!--
+                            -->{{ company.business_content }}<!--
+                        --></p>
                     </div>
                 </div>
                 <div class="w-full xl:w-1/3 md:w-1/2 p-3">
@@ -149,9 +149,9 @@
                                 </h2>
                             </div>
                         </div>
-                        <p class="leading-relaxed text-base whitespace-pre-line">
-                            {{ company.business_bank }}
-                        </p>
+                        <p class="leading-relaxed text-base whitespace-pre-line"><!--
+                            -->{{ company.business_bank }}<!--
+                        --></p>
                     </div>
                 </div>
                 <div class="w-full xl:w-1/3 md:w-1/2 p-3">

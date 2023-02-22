@@ -2,7 +2,7 @@
     <nav class="bg-white p-1 mt-0 fixed w-full z-10 top-0 border-b border-gray-200">
         <div class="container mx-auto flex flex-wrap items-center">
             <div class="flex w-full md:w-1/2 justify-start pl-4 text-steam-black font-extrabold">
-                <a class="no-underline text-2xl hover:text-stj-mist" href="/">
+                <a class="no-underline sm:text-3xl text-2xl hover:text-stj-mist" href="/">
                     コトラ合同会社
                 </a>
             </div>
