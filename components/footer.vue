@@ -9,6 +9,23 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                 {{ footer.mail }}
             </div>
+            <div class="grid grid-cols-5 gap-4 my-8">
+                <div>
+                    <a class="underline" href="/">トップ</a>
+                </div>
+                <div>
+                    <a class="underline" href="/company">会社概要</a>
+                </div>
+                <div>
+                    <a class="underline" href="/news">ニュース</a>
+                </div>
+                <div>
+                    <a class="underline" href="/contact">問合せ</a>
+                </div>
+                <div class="animate-bounce">
+                    <a class="underline" href="/sitelink">サイト</a>
+                </div>
+            </div>
             <div class="flex justify-end">
                 <small>2023 KOTORA, Inc. All Rights Reserved</small>
             </div>

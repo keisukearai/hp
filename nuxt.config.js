@@ -83,6 +83,10 @@ export default {
     '/hp/inquiry': {
       target: process.env.API_BASE_URL,
       changeOrigin: true,
+    },
+    '/hp/sitelink': {
+      target: process.env.API_BASE_URL,
+      changeOrigin: true,
     }
   },
   /*
@@ -98,6 +102,7 @@ export default {
   publicRuntimeConfig: {
     API_BASE_URL: process.env.API_BASE_URL,
     API_URL_COMPANY: process.env.API_URL_COMPANY,
+    API_URL_NEWS: process.env.API_URL_NEWS,
     API_URL_NEWS: process.env.API_URL_NEWS
   }
 }
