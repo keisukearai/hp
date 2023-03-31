@@ -5,6 +5,9 @@
                 <div class="lg:w-1/2 w-full mb-6 lg:mb-0">
                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
                         お問合せフォーム
+                        <span class="inline-flex items-center justify-center w-5 h-5 text-xs font-semibold text-gray-700 bg-blue-200 rounded-full">
+                            {{ inquiry_count }}
+                        </span>
                     </h1>
                     <div class="h-1 w-20 bg-indigo-500 rounded"></div>
                 </div>
@@ -97,7 +100,8 @@
                         v-on:click="send"
                         v-bind:disabled="isSend"
                         v-bind:class="(isSend == true? 'bg-gray-500 cursor-auto': 'bg-indigo-500 hover:bg-indigo-600')"
-                        >送信</button>
+                        >送信
+                        </button>
                     </div>
                     <div class="p-2 w-full pt-8 mt-4 border-t border-gray-200 text-center">
                         <div class="pb-8">
@@ -164,15 +168,22 @@ export default {
     },
     async asyncData({ $axios }) {
         // 取得先のURL(nuxt.config.js)
+        // 会社メールアドレス取得
         const url = "/hp/company"
+        // 未確認の問い合わせ件数取得
+        const url_inquiry_count = "/hp/inquiry_count"
 
         try {
-            console.log("axios start:" + url)
-            // リクエスト
-            const response = await $axios.$get(url)
+
+            const [res_company, res_inquiry_count] = await Promise.all([
+                $axios.$get(url),
+                $axios.$get(url_inquiry_count)
+            ]);
+
             // 返却 dataにマージ
             return {
-                company: response.company[0]
+                company: res_company.company[0],
+                inquiry_count: res_inquiry_count.inquiry_count
             }
         } catch (e) {
             console.log("axios erorr")
