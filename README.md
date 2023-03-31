@@ -8,6 +8,9 @@
 # install dependencies
 $ yarn install
 
+# windows NODE_OPTION
+$ $env:NODE_OPTIONS="--openssl-legacy-provider"
+
 # serve with hot reload at localhost:3000
 $ yarn dev
 
