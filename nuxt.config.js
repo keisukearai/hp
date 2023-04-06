@@ -42,6 +42,7 @@ export default {
   */
   plugins: [
     '~/plugins/axios',
+    '~/plugins/constants',
     {src: '~/plugins/sliding-paginate', mode:'client'},
   ],
   /*
