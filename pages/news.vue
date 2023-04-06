@@ -169,8 +169,11 @@ export default {
 </script>
 
 <style>
+.c-sliding-pagination__page {
+    padding: 1rem !important;
+}
 .c-sliding-pagination__list-element {
-    padding: 0.6rem 1rem !important;
+    padding: 0.5rem 0.1rem;
     margin-right: 1rem !important;
     background-color: #718096 !important;
 }
