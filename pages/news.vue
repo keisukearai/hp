@@ -134,7 +134,7 @@ export default {
             // ページ設定
             this.currentPage = selectedPage
             // URL
-            const url = this.$config.API_BASE_URL + this.$config.API_URL_NEWS + "?page=" + selectedPage + "&word=" + this.word
+            const url = this.$config.API_BASE_URL + this.$config.API_URL_NEWS + "?page=" + selectedPage + "&word=" + this.word + "&category=" + this.selected_category
             console.log("paginatioHandler url:" + url)
             const response = await fetch(
                 url
