@@ -1,7 +1,7 @@
 <template>
     <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
-            <div class="flex flex-wrap w-full mb-20">
+            <div class="flex flex-wrap w-full mb-8 lg:mb-20">
                 <div class="lg:w-1/2 w-full my-6 lg:mb-0">
                     <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
                         弊社からのお知らせ
@@ -14,7 +14,7 @@
             </div>
             <div class="flex justify-center">
                 <article>
-                    <div class="block p-6 rounded-lg shadow-lg bg-gray-100 max-w-xl ml-6 mb-10 w-11/12">
+                    <div class="block p-6 rounded-lg shadow-lg bg-gray-200 max-w-xl ml-3 mb-10 w-11/12">
                         <div class="text-lg pb-3 font-bold">
                             {{ newsdetail.title }}<span class="text-sm px-3">{{ category.category_name }}</span>
                         </div>
